@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <div className={}>
+        <div>
           <h1>Title</h1>
           <div className={styles.l}></div>
         </div>
