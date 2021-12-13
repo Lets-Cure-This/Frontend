@@ -1,77 +1,51 @@
-import React, { FormEvent, useEffect, useState } from 'react'
+// React
+import React, { FormEvent, useEffect, useState } from 'react';
+// Components
+
+// An unordered list of elements to be displayed 
+// in the search results
+const nameList: string[] = [
+    'john',
+    'paul',
+    'george',
+    'ringo',
+    'jane',
+    'mary',
+    'moe',
+    'larry',
+    'curly',
+    'shemp',
+    'joe',
+    'jack',
+    'will',
+    'zack',
+]
 
 function SearchBar() {
     // This is considered the pattern to match against.
     const [searchTerm, setSearchTerm] = useState<string>('');
     
     // These are all the possiblilities for the search.
-    // const [searchResults, setSearchResults] = useState<string[]>([]);
     const [searchResultsSet, setSearchResultsSet] = useState<Set<string>>(new Set());
     const [isLoading, setIsLoading] = useState<boolean>(false);
-
-    // An unordered list of elements to be displayed 
-    // in the search results
-    const nameList: string[] = [
-        'john',
-        'paul',
-        'george',
-        'ringo',
-        'jane',
-        'mary',
-        'moe',
-        'larry',
-        'curly',
-        'shemp',
-        'joe',
-        'jack',
-        'will',
-        'zack',
-    ]
+    
+    useEffect(() => {
+        // console.log("Use Effect Search Term: ", searchTerm);
+        // console.log('Outscope Result of Search Results Set: ', searchResultsSet);
+        if(searchTerm){
+            console.log('Handle Search Term: ', searchTerm);
+            setSearchResultsSet(
+                new Set(nameList.filter((v: string) => 
+                    bitapSearchLite(v, searchTerm) != -1)
+                )
+            );
+        }
+    }, [searchTerm]);
 
     // Simple handler for the search input
     const handleSearch = async (e: FormEvent<HTMLInputElement>) => {       
         setSearchTerm((e.target as HTMLInputElement).value);
-        // setIsLoading(true);
-
-        // console.log(bitapSearchLite(nameList[0], searchTerm));
-        // nameList.filter((v: string) => bitapSearchLite(v, searchTerm) != -1);
-        setSearchResultsSet(new Set(nameList.filter((v: string) => bitapSearchLite(v, searchTerm) != -1)));
-        // for(const name of nameList) {
-        //     if(bitapSearchLite(name, searchTerm) != -1) {
-        //         console.log(`Name is ${name} and term to search is ${searchTerm}`);
-
-        //         // Search Results state
-        //         // setSearchResults([...searchResults, name]);
-        //         // console.log('Inscope Result of Search Results: ', searchResults);
-
-        //         // Search Results Set
-        //         if(!searchResultsSet.has(name)) {
-        //             // add set element
-        //             // searchResultsSet.add(name);
-        //             setSearchResultsSet(new Set([...searchResultsSet, name]));
-        //         } 
-        //         // console.log('Inscope Result of Search Results: ', arrRes);
-        //         // if(searchTerm[0] === name[0])
-
-        //     }
-        // }
-
-        // if(nameList.includes(searchTerm)) {
-        //     // nameList.indexOf(searchTerm);
-        //     let result = nameList.filter(name => searchTerm.includes(name));
-        //     setIsLoading(false);
-        //     setSearchResults(result);
-        //     console.log(searchResults);
-        // }else {
-        //     console.log(`No results found, term is ${searchTerm}`);
-        // }
     }
-
-    // Log Search Term so I can review it
-    // console.log(searchTerm)
-    // console.log('Outscope Result of Search Results: ', searchResults);
-    console.log('Outscope Result of Search Results Set: ', searchResultsSet);
-
 
     return (
         <div>
@@ -79,7 +53,7 @@ function SearchBar() {
             <input 
                 type="text"
                 value={searchTerm}
-                onChange={handleSearch}
+                onChange={e => handleSearch(e)}
                 placeholder="search"    
             />
             {isLoading ?
@@ -215,7 +189,7 @@ const bitapSearch = (str: string, ptrn: string) => {
 }
 
 const bitapSearchLite = (str: string, ptrn: string) => {
-    console.log('BITAP SEARCH INVOKE: ', str, ptrn);
+    // console.log('BITAP SEARCH INVOKE: ', str, ptrn);
 
     const PATTERN_MASK_LIMIT = 256;
     const MAX_PATTERN_LENGTH = 63;
@@ -224,7 +198,7 @@ const bitapSearchLite = (str: string, ptrn: string) => {
     let patternMask = new Array(PATTERN_MASK_LIMIT);
     let ptrnLen = ptrn.length;
 
-    if(ptrnLen == 0 || ptrnLen > MAX_PATTERN_LENGTH || ptrnLen > str.length) return -1;
+    if(ptrnLen == 0 || ptrnLen > MAX_PATTERN_LENGTH) return -1;
 
     for (let i = 0; i < ptrnLen; i++) {
         patternMask[ptrn.charCodeAt(i)] = patternMask[ptrn.charCodeAt(i)] | (1 << i);  
