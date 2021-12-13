@@ -9,23 +9,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <nav>
-
-
-        </nav>
         <SearchBar />
-        <div>
-          <h1>Title</h1>
-          <div className={styles.l}></div>
-        </div>
-        <div>
-          <h1>Title</h1>
-          <div className={styles.l}></div>
-        </div>
-        <div>
-          <h1>Title</h1>
-          <div className={styles.l}></div>
-        </div>
       </main>
     </div>
   )
