@@ -1,0 +1,14 @@
+# Node BS
+node_modules/
+
+# Data files
+dist
+data/_ignore/
+data/toConvert/
+
+# Log files
+logs/
+
+# Environment files
+.env
+env/

@@ -1,18 +1,16 @@
 // React
 import type { NextPage } from 'next'
 // Components
-import SearchBar from '../components/search/searchBar/main'
-// Styles
-import styles from '../styles/Home.module.css'
+import SearchBar from '../components/search/searchBar/main';
 
 const Home: NextPage = () => {
-  return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <SearchBar />
-      </main>
-    </div>
-  )
+	return (
+		<div className='container'>
+			<main className='main'>
+				<SearchBar />
+			</main>
+		</div>
+	)
 }
 
 export default Home
