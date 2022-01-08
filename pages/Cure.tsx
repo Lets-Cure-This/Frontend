@@ -2,9 +2,9 @@ import React from 'react'
 
 function Cure() {
 	return (
-		<div>
-			<main>
-				Cure page
+		<div className='container'>
+			<main className='main'>
+				CURE PAGE
 			</main>
 		</div>
 	)

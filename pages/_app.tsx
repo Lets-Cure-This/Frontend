@@ -1,9 +1,9 @@
 // NextJS
-import Head from 'next/head';
-import type { AppProps } from 'next/app';
+import Head from "next/head";
+import type { AppProps } from "next/app";
 // Styles
-import '../styles/globals.css';
-import NavbarMain from '../components/Navbar/NavbarMain';
+import "../styles/globals.css";
+import NavbarMain from "../components/Navbar/NavbarMain";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<Component {...pageProps} />
 			</>
 		</>
-	)
+	);
 }
 
-export default MyApp
+export default MyApp;

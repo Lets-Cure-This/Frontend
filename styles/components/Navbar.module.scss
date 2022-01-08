@@ -1,0 +1,101 @@
+.navbarMain {
+    background-color: #fff;
+    // border-bottom: 1px solid #d5d5d5;
+    // box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    margin-bottom: 0;
+    padding: 0;
+    position: -webkit-sticky;
+    position: sticky;
+	top: 0;
+    z-index: 1030;
+}
+
+.navbarMainContainer {
+    background-color: #fff;
+}
+
+.navbarMainItemList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    list-style: none;
+    &>li:first-child {
+        color: #000;
+		-moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+		font-family: Inconsolata, sans-serif;
+		font-weight: 800;
+	}
+    & > li:not(:first-child){
+		--border-color: blue;
+		--border-width: 0.1rem;
+        --bottom-distance: 0rem;
+
+        font-family: Raleway, sans-serif;
+		font-weight: 300;
+        color: rgb(131, 131, 131);
+
+		background-image: linear-gradient(var(--border-color), var(--border-color));
+		background-size: 0% var(--border-width);
+		background-repeat: no-repeat;
+		background-position: 50% calc(100% - var(--bottom-distance));
+
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+		& > a {
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			line-height: 3rem;
+		}
+		&:hover {
+            color: #000;
+			background-size: 100% var(--border-width);
+        }
+    }
+}
+
+.authContainer {
+	
+    &>button:first-child {
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+    }
+    &>button:last-child {
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+    }
+    &>button {
+        background-color: white;
+        border: #000 solid 0.10rem;
+        // border-radius: 0.25rem;
+        
+		cursor: pointer;
+		font-family: Raleway, sans-serif;
+		font-weight: 500;
+		
+		-moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+        &>p {
+            margin: 0.25rem;
+        }
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+}
+
+@mixin transition-seq($transition) {
+	transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	-webkit-transition: $transition;
+}

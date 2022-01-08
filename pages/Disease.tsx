@@ -2,8 +2,8 @@ import React from 'react'
 
 function disease() {
 	return (
-		<div>
-			<main>
+		<div className='container'>
+			<main className='main'>
 				DISEASE PAGE
 			</main>
 		</div>
