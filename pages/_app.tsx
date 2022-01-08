@@ -2,7 +2,7 @@
 import Head from "next/head";
 import type { AppProps } from "next/app";
 // Styles
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import NavbarMain from "../components/Navbar/NavbarMain";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -14,9 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<NavbarMain />
-			<>
-				<Component {...pageProps} />
-			</>
+			<Component {...pageProps} />
 		</>
 	);
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function disease() {
 	return (
@@ -7,7 +7,7 @@ function disease() {
 				DISEASE PAGE
 			</main>
 		</div>
-	)
+	);
 }
 
 export default disease;

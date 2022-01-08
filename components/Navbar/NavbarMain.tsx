@@ -35,30 +35,31 @@ const NavbarMain = () => {
 	];
 
 	return (
-		<nav className={styles.navbarMain}>
-			<div className={styles.navbarMainContainer}>
-				<ul className={styles.navbarMainItemList}>
-					{
-						navItems.map((item, index) => {
-							return (
-								<li key={`navItem_${index}`}>
-									<Link href={`${item.link}`}>{item.value}</Link>
-								</li>
-							);
-						})
-					}
-					<div className={styles.authContainer}>
-						<button>
-							<p>Login</p>
-						</button>
-						<button>
-							<p>Register</p>
-						</button>
-					</div>
-				</ul>
-			</div>
-
-		</nav>
+		<div className={styles.navbarMainContainer}>
+			<nav className={styles.navbarMain}>
+				<div className={styles.navbarMainItemListContainer}>
+					<ul className={styles.navbarMainItemList}>
+						{
+							navItems.map((item, index) => {
+								return (
+									<li key={`navItem_${index}`}>
+										<Link href={`${item.link}`}>{item.value}</Link>
+									</li>
+								);
+							})
+						}
+						<div className={styles.authContainer}>
+							<button>
+								<p>Login</p>
+							</button>
+							<button>
+								<p>Register</p>
+							</button>
+						</div>
+					</ul>
+				</div>
+			</nav>
+		</div>
 	);
 };
 

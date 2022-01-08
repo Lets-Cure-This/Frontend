@@ -1,16 +1,20 @@
-.navbarMain {
-    background-color: #fff;
-    // border-bottom: 1px solid #d5d5d5;
-    // box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
-    margin-bottom: 0;
-    padding: 0;
+.navbarMainContainer {
+	top: 0;
+	// margin: 0;
+    // padding: 0;
     position: -webkit-sticky;
     position: sticky;
-	top: 0;
+}
+
+.navbarMain {
+	background-color: #fff;
+    border-bottom: 1px solid #d5d5d5;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+
     z-index: 1030;
 }
 
-.navbarMainContainer {
+.navbarMainItemListContainer {
     background-color: #fff;
 }
 
@@ -21,7 +25,8 @@
     align-content: center;
     align-items: center;
     list-style: none;
-    &>li:first-child {
+
+    & > li:first-child {
         color: #000;
 		-moz-transition: all .2s ease-in;
         -o-transition: all .2s ease-in;
@@ -30,6 +35,7 @@
 		font-family: Inconsolata, sans-serif;
 		font-weight: 800;
 	}
+
     & > li:not(:first-child){
 		--border-color: blue;
 		--border-width: 0.1rem;
@@ -48,11 +54,13 @@
         -o-transition: all .2s ease-in;
         -webkit-transition: all .2s ease-in;
         transition: all .2s ease-in;
+
 		& > a {
 			margin-top: 1rem;
 			margin-bottom: 1rem;
 			line-height: 3rem;
 		}
+
 		&:hover {
             color: #000;
 			background-size: 100% var(--border-width);
@@ -62,15 +70,15 @@
 
 .authContainer {
 	
-    &>button:first-child {
+    & > button:first-child {
         border-top-left-radius: 0.25rem;
         border-bottom-left-radius: 0.25rem;
     }
-    &>button:last-child {
+    & > button:last-child {
         border-top-right-radius: 0.25rem;
         border-bottom-right-radius: 0.25rem;
     }
-    &>button {
+    & > button {
         background-color: white;
         border: #000 solid 0.10rem;
         // border-radius: 0.25rem;
@@ -83,7 +91,7 @@
         -o-transition: all .2s ease-in;
         -webkit-transition: all .2s ease-in;
         transition: all .2s ease-in;
-        &>p {
+        & > p {
             margin: 0.25rem;
         }
         &:hover {

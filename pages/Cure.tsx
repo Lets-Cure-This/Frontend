@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function Cure() {
 	return (
@@ -7,7 +7,7 @@ function Cure() {
 				CURE PAGE
 			</main>
 		</div>
-	)
+	);
 }
 
 export default Cure;
