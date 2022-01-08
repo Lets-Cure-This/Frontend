@@ -1,0 +1,75 @@
+// Mixins
+@use '../../lib/mixins/style.mixins' as MS;
+@use '../../lib/mixins/animations.mixins' as MA;
+@use '../../lib/variables/style.variables' as VS;
+
+.navbarMainContainer {
+	top: 0; 
+    position: fixed;
+	width: 100vw;
+
+}
+
+.navbarMain {
+	@include MS.flex-spaced-center;
+	width: 100vw;
+	background-color: #fff;
+
+    z-index: 1030;
+}
+
+
+.navbarMainItemListContainer {
+    background-color: #fff;
+	width: 30vw;
+}
+
+.navbarMainItemList {
+	--border-width: 0.1rem;
+	@include MS.flex-spaced-center;
+
+    li{
+		@include MS.nav-text(300, rgb(131, 131, 131));
+		@include MS.centerBar(rgb(71, 158, 180), var(--border-width), 0rem);	
+		@include MA.transition-seq( all, .2s, ease-in);
+		list-style: none;
+
+		a {
+			line-height: 3rem;
+		}
+
+		&:hover {
+            color: #000;
+			background-size: 100% var(--border-width);
+        }
+    }
+}
+
+.logoContainer {
+	@include MS.nav-text(800, rgb(0, 0, 0));
+}
+
+
+.authContainer {
+	--side-var: 1rem;
+	--button-border-size:  0.1rem;
+	@include MS.taiji-button(var(--side-var), var(--side-var), var(--button-border-size), black);
+
+    & > button {
+		@include MS.nav-text(500, rgb(0, 0, 0));
+		@include MA.transition-seq( all, .2s, ease-in);
+
+        background-color: white;
+		cursor: pointer;
+
+        & > p {
+            margin: 0.25rem;
+        }
+
+        &:hover {
+            background-color: VS.$taiji-primary-background-color;
+            color: VS.$taiji-primary-color;
+        }
+    }
+}
+

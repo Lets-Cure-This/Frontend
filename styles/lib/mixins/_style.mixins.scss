@@ -1,0 +1,82 @@
+// Navbar mixins
+@mixin nav-text ($weight, $color) {
+	color: $color;
+	font-family: Raleway, sans-serif;
+	font-weight: $weight;
+}
+
+// // Auth Button Mixins
+@mixin taiji-button($leftRadius, $rightRadius, $borderSize, $borderColor) {
+	button:first-child {
+        border-top-left-radius: $leftRadius;
+        border-bottom-left-radius: $leftRadius;
+        border-color: black;
+		border-bottom: $borderSize solid $borderColor;
+		border-top: $borderSize solid $borderColor;
+		border-left: $borderSize solid $borderColor;
+		border-right: $borderSize solid $borderColor;
+    }
+
+    > button:last-child {
+        border-top-right-radius: $rightRadius;
+        border-bottom-right-radius: $rightRadius;
+		border-bottom: $borderSize solid $borderColor;
+		border-top: $borderSize solid $borderColor;
+		border-right: $borderSize solid $borderColor;
+		border-left: 0rem;
+    }
+}
+
+// General Mixins
+// // Flex element
+// // and then center all items
+// // in a row with an even
+// // amount of space between
+// // each item.
+@mixin flex-spaced-center {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+// Specialty Mixins
+// // Center Bar
+// // Used for centerbar animation
+// // Combine with _animations.transition-seq
+// // for a smooth centerbar expand and contract animation
+@mixin centerBar($color, $width, $distance) {
+	background-image: linear-gradient($color, $color);
+	background-size: 0% $width;
+	background-repeat: no-repeat;
+	background-position: 50% calc(100% - $distance);
+}
+
+// // Scroll Bar
+// // // Scroll Bar with smooth scroll enabled
+@mixin scroll-bar-smooth($primaryColor, $secondaryColor, $primaryBackgroundColor){
+	scroll-behavior: smooth;
+
+	/* width */
+	&::-webkit-scrollbar {
+		width: 0.5rem;
+	}
+	
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: $primaryBackgroundColor;
+	}
+	
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: $primaryColor;
+	}
+	
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+		background: $secondaryColor;
+	} 
+
+	scrollbar-color: $primaryColor $primaryBackgroundColor;
+    scrollbar-width: thin;
+}

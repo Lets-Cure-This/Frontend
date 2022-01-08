@@ -1,0 +1,9 @@
+// Mixins
+@mixin transition-seq($prop, $duration, $timing) {
+	transition: $prop $duration $timing;
+	-moz-transition: $prop $duration $timing;
+	-o-transition: $prop $duration $timing;
+	-webkit-transition: $prop $duration $timing;
+}
+
+

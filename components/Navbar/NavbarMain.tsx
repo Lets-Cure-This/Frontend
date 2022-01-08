@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 // Styles
-import styles from "../../styles/components/Navbar.module.scss";
+import styles from "../../styles/next/components/Navbar.module.scss";
 
 type INavItems = {
 	value: string | JSX.Element;
@@ -12,11 +12,6 @@ type INavItems = {
 
 const NavbarMain = () => {
 	const navItems: INavItems[] = [
-		{
-			value: "L.C.T.",
-			link: "/",
-			desc: "Home Page",
-		},
 		{
 			value: "About",
 			link: "/About",
@@ -37,26 +32,34 @@ const NavbarMain = () => {
 	return (
 		<div className={styles.navbarMainContainer}>
 			<nav className={styles.navbarMain}>
+				<div className={styles.logoContainer}>
+					<Link href="/">
+						L.C.T.
+					</Link>
+
+				</div>
 				<div className={styles.navbarMainItemListContainer}>
 					<ul className={styles.navbarMainItemList}>
 						{
 							navItems.map((item, index) => {
 								return (
 									<li key={`navItem_${index}`}>
-										<Link href={`${item.link}`}>{item.value}</Link>
+										<Link href={`${item.link}`}>
+											{item.value}
+										</Link>
 									</li>
 								);
 							})
 						}
-						<div className={styles.authContainer}>
-							<button>
-								<p>Login</p>
-							</button>
-							<button>
-								<p>Register</p>
-							</button>
-						</div>
 					</ul>
+				</div>
+				<div className={styles.authContainer}>
+					<button>
+						<p>Login</p>
+					</button>
+					<button>
+						<p>Register</p>
+					</button>
 				</div>
 			</nav>
 		</div>

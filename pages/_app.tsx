@@ -3,6 +3,8 @@ import Head from "next/head";
 import type { AppProps } from "next/app";
 // Styles
 import "../styles/globals.scss";
+import styles from "../styles/app.module.scss";
+// Components
 import NavbarMain from "../components/Navbar/NavbarMain";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -14,7 +16,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<NavbarMain />
-			<Component {...pageProps} />
+			<main className={styles.pageContainer}>
+				<Component {...pageProps} />
+			</main>
 		</>
 	);
 }

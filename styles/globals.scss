@@ -1,4 +1,9 @@
-/* Google Fonts  */
+// Browser Normalizer
+@use './lib/normalize.css';
+// Mixins
+@use './lib/mixins/style.mixins' as MS;
+@use './lib/variables/style.variables' as VS;
+// Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html,
@@ -10,34 +15,12 @@ body {
 }
 
 html {
-	/* width */
-	&::-webkit-scrollbar {
-		width: 4px;
-	}
-	
-	/* Track */
-	&::-webkit-scrollbar-track {
-		background: #e0e0e0;
-	}
-	
-	/* Handle */
-	&::-webkit-scrollbar-thumb {
-		background: #6969dd;
-	}
-	
-	/* Handle on hover */
-	&::-webkit-scrollbar-thumb:hover {
-		background: #1b1b69;
-	} 
-
-	scrollbar-color: #6969dd #e0e0e0;
-    scrollbar-width: thin;
-	overflow: auto;
-}
-
-body {
-  background-color: #ddd;
-
+	// Scrollbar logic
+	// Great guide here:
+	// https://ishadeed.com/article/custom-scrollbars-css/ 
+    overflow-x: hidden;
+    overflow-y: scroll;
+	@include MS.scroll-bar-smooth(VS.$main-primary-font-color, VS.$main-secondary-font-color, VS.$main-primary-background-color);
 }
 
 a {
@@ -48,19 +31,3 @@ a {
 * {
   box-sizing: border-box;
 }
-
-// .container {
-// 	padding: 0;
-// 	margin: 0;
-// }
-  
-// .main {
-// 	min-height: 100rem;
-// 	padding: 4rem 0;
-// 	flex: 1;
-// 	display: flex;
-// 	flex-direction: column;
-// 	justify-content: center;
-// 	align-items: center;
-// }
-
