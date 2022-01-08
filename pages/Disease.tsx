@@ -1,6 +1,7 @@
+// React
 import React from "react";
 
-function disease() {
+function Disease() {
 	return (
 		<div className='container'>
 			DISEASE PAGE
@@ -8,4 +9,4 @@ function disease() {
 	);
 }
 
-export default disease;
+export default Disease;
