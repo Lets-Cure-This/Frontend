@@ -30,7 +30,7 @@
     li{
 		@include MS.nav-text(400, VS.$navbar-main-primary-font-color);
 		@include MS.centerBar(VS.$main-secondary-font-color, var(--border-width), 0rem);	
-		@include MA.transition-seq( all, .2s, ease-in);
+		@include MA.transition-seq(all, .2s, ease-in);
 		list-style: none;
 
 		a {
@@ -52,11 +52,11 @@
 .authContainer {
 	--side-var: 1rem;
 	--button-border-size: 0.15rem;
-	@include MS.taiji-button(var(--side-var), var(--side-var), var(--button-border-size), VS.$navbar-main-secondary-font-color);
+	@include MS.taiji-button-multi(var(--side-var), var(--side-var), var(--button-border-size), VS.$navbar-main-secondary-font-color);
 
     & > button {
 		@include MS.nav-text(400, VS.$navbar-main-secondary-font-color);
-		@include MA.transition-seq( all, .2s, ease-in);
+		@include MA.transition-seq(all, .2s, ease-in);
 
         background-color: white;
 		cursor: pointer;

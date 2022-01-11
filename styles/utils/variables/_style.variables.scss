@@ -2,13 +2,18 @@
 // // Font Family
 $main-primary-font-family: Inter, sans-serif;
 $main-secondary-font-family: Raleway, sans-serif;
+$main-monospace-font-family: Inconsolata, monospace;
+
+$alt-primary-font-family: Montserrat, sans-serif;
+$alt-secondary-font-family: Recursive, sans-serif;
+$alt-monospace-font-family: Inconsolata, monospace;
 
 // // Font Colors
 // // // Main
-$main-primary-font-color: #00bcd4;
-$main-secondary-font-color: #11707c;
-// $alt-primary-font-color: ;
-// $alt-secondary-font-color: ;
+$main-primary-font-color: rgb(206, 206, 206);
+$main-secondary-font-color: rgb(87, 126, 231);
+$alt-primary-font-color: rgb(53, 53, 53);
+$alt-secondary-font-color: rgb(27, 55, 133);
 
 // // // Navbar
 $navbar-main-primary-font-color: rgb(131, 131, 131);
@@ -22,7 +27,7 @@ $main-secondary-background-color: rgb(22, 22, 22);
 // $alt-primary-background-color: #fff; 
 // $alt-secondary-background-color: #000;
 
-// //  Taiji Buttons
+// Taiji Buttons
 $taiji-primary-background-color: #11707c;
 $taiji-primary-color: white;
 

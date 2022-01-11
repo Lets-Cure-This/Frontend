@@ -41,7 +41,11 @@ const Home: NextPage = () => {
 
 
 			<div className={styles.callToActionContainer}>
-				<button className={styles.callToActionButton}>{"Let's Cure This!"}</button>
+				<button className={styles.callToActionButton}>
+					<p>
+						{"Let's Cure This!"}
+					</p>
+				</button>
 			</div>
 		</div>
 	);

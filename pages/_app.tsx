@@ -12,9 +12,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<Head>
-				<title>Create Next App</title>
+				<title>{"Let's Cure Everything!"}</title>
 				<meta name="description" content="Let's Cure This" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/dna.svg" />
 			</Head>
 			<EventHeader />
 			<NavbarMain />

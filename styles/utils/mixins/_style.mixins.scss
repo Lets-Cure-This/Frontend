@@ -9,7 +9,13 @@
 }
 
 // // Navbar Auth Button Mixins
-@mixin taiji-button($leftRadius, $rightRadius, $borderSize, $borderColor) {
+@mixin taiji-button-single($radius, $borderSize, $borderColor) {
+	color: inherit;
+	border: $borderColor solid $borderSize;
+	border-radius: $radius;
+}
+
+@mixin taiji-button-multi($leftRadius, $rightRadius, $borderSize, $borderColor) {
 	button:first-child {
         border-top-left-radius: $leftRadius;
         border-bottom-left-radius: $leftRadius;
@@ -19,7 +25,7 @@
 		border-right: $borderSize solid $borderColor;
     }
 
-    > button:last-child {
+    button:last-child {
         border-top-right-radius: $rightRadius;
         border-bottom-right-radius: $rightRadius;
 		border-bottom: $borderSize solid $borderColor;
@@ -29,6 +35,42 @@
     }
 }
 
+// Index Page mixins
+@mixin index-text ($weight, $color) {
+	color: $color;
+	font-weight: $weight;
+}
+// // Main Text
+@mixin index-main-p-text ($weight, $color) {
+	@include index-text($weight, $color);
+	font-family: VS.$main-primary-font-family;
+}
+
+@mixin index-main-s-text ($weight, $color) {
+	@include index-text($weight, $color);
+	font-family: VS.$main-secondary-font-family;
+}
+
+@mixin index-main-monospace-text ($weight, $color) {
+	@include index-text($weight, $color);
+	font-family: VS.$main-monospace-font-family;
+}
+
+// // Alternative Text
+@mixin index-alt-p-text ($weight, $color) {
+	@include index-text($weight, $color);
+	font-family: VS.$alt-primary-font-family;
+}
+
+@mixin index-alt-s-text ($weight, $color) {
+	@include index-text($weight, $color);
+	font-family: VS.$alt-secondary-font-family;
+}
+
+@mixin index-alt-monospace-text ($weight, $color) {
+	@include index-text($weight, $color);
+	font-family: VS.$alt-monospace-font-family;
+}
 // General Mixins
 // // Flex element
 // // and then center all items

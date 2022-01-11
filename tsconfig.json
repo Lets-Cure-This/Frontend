@@ -13,6 +13,9 @@
 			"@utils/*": [
 				"utils/*"
 			],
+			"@public/*": [
+				"public/*"
+			],
 		},
 		"target": "es2020",
 		"lib": [

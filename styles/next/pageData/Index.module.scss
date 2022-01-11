@@ -1,16 +1,18 @@
 // Mixins
 @use '@styles/utils/mixins/style.mixins' as MS;
+@use '@styles/utils/mixins/animations.mixins' as MA;
 
-// <h3 className={styles.diseaseHeader}>
+@use '@styles/utils/variables/style.variables' as VS;
+
+
 // <div className={styles.callToActionContainer}>
-// <button className={styles.callToActionButton}>
 
 .indexContainer {
 	@include MS.flex-spaced-center(column, space-around, center);
 
-	height: 40vw;
+	height: 60vh;
 	width: 100vw;
-	background-color: rgb(255, 6, 201);
+	background-color: VS.$main-primary-background-color;
 }
 
 .headerContainer {
@@ -18,9 +20,31 @@
 }
 
 .logoHeader {
-	;
+	@include MS.index-main-p-text(800, VS.$alt-primary-font-color);
+	font-size: 6rem;
 }
 
 .diseaseHeader {
+	@include MS.index-main-p-text(600, VS.$alt-secondary-font-color);
+	font-size: 3rem;
+}
 
+// .callToActionContainer {}
+
+.callToActionButton {
+	@include MS.taiji-button-single(1rem, 0.15rem, VS.$alt-primary-font-color);
+	@include MS.index-main-p-text(400, VS.$alt-primary-font-color);
+	@include MA.transition-seq(all, .2s, ease-in);
+
+	background-color: white;
+	cursor: pointer;
+
+	& > p {
+		margin: 0.25rem;
+	}
+
+	&:hover {
+		background-color: VS.$taiji-primary-background-color;
+		color: VS.$taiji-primary-color;
+	}
 }
