@@ -12,6 +12,8 @@
 .navbarMain {
 	@include MS.flex-spaced-center(row, space-around, center);
 	width: 100vw;
+
+	border-bottom: gradie rgba(60, 60, 80, 0.5) 1rem solid;
 	background-color: #fff;
 
     z-index: 1030;

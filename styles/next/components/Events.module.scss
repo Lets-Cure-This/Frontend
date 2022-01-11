@@ -45,33 +45,21 @@
 }
 
 .eventButton {
-	// @include MA.transition-seq( all, .2s, ease-in);
-	// @include MS.flex-spaced-center(row, space-around, center);
+	@include MA.transition-seq( all, .2s, ease-in);
 
 	width: 5rem;
 	height: 5rem;
-	// padding: 0.2rem;
 
-	// border: VS.$alt-secondary-font-color solid 0.2rem;
-	// border-radius: 0.75rem;
-	color: blue;
-	background-color: white;
 	filter: invert(17%) sepia(75%) saturate(1639%) hue-rotate(206deg) brightness(98%) contrast(94%);
 	
 	p{
 		color: VS.$alt-secondary-font-color;
 	}
 
-	// &:hover {
-	// 	background-color: VS.$alt-secondary-font-color;
-	// 	border: #fff solid 0.2rem;
+	&:hover {
+		filter: invert(17%) sepia(75%) saturate(1639%) hue-rotate(206deg) brightness(88%) contrast(94%);
+	}
 
-	// 	cursor: pointer;
-		
-	// 	p{
-	// 		color: #fff;
-	// 	}
-	// }
 	z-index: 1033;
 }
 
