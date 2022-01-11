@@ -94,7 +94,7 @@ function SearchBar() {
 //     console.log(data);
 // })
 
-// eslint-disable-next-line indent
+
 const displaySearchResults = (arr: string[]) => {
 	// Filter out duplicates and then
 	// map over the array and return a list of elements
@@ -102,9 +102,11 @@ const displaySearchResults = (arr: string[]) => {
 	return arr.filter(
 		(v: string, i: number, a: string[]) => a.indexOf(v) === i)
 		.map(
+			// eslint-disable-next-line @typescript-eslint/no-unused-vars
 			(v: string, i: number, a: string[]) => {
 				return <li key={`${i}_${v}`}>{v}</li>;
-			});
+			}
+		);
 };
 
 
