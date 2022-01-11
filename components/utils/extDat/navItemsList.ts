@@ -15,7 +15,7 @@ const NAV_ITEMS: NavItemsType[] = [
 		value: "Cure",
 		link: "/cure",
 		desc: "Discussion board along with getting them connected to the right people, and the right resources.",
-	}
+	},
 ];
 
 export default NAV_ITEMS;
