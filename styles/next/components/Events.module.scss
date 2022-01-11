@@ -1,0 +1,81 @@
+@use '@styles/utils/variables/style.variables' as VS;
+@use '@styles/utils/mixins/style.mixins' as MS;
+@use '@styles/utils/mixins/animations.mixins' as MA;
+
+.eventContainer {
+	@include MS.flex-spaced-center(row, space-around, center);
+
+	position: sticky;
+	width: 100vw;
+	height: 2rem;
+
+	opacity: 1;
+
+	background-color: black;
+
+	z-index: 1031;
+
+	// For some reason, the opacity is not being set to 0 when the event is closed.
+	// This is a hack to get around that.
+	* { 
+		opacity: 1;
+	}
+}
+
+.eventContainerClosed {
+	// For transition settings:
+	//https://stackoverflow.com/questions/13037637/css-animation-and-display-none
+	@include MA.transition-seq(opacity, 0.5s, linear);
+
+	position: absolute;
+	width: 100vw;
+	height: 2rem;
+
+	opacity: 0;
+
+	background-color: black;
+
+	z-index: 1031;
+
+	// For some reason, the opacity is not being set to 0 when the event is closed.
+	// This is a hack to get around that.
+	* { 
+		opacity: 0;
+	}
+}
+
+.eventButton {
+	@include MA.transition-seq( all, .2s, ease-in);
+	@include MS.flex-spaced-center(row, space-around, center);
+
+	width: 1.6rem;
+	height: 1.6rem;
+	padding: 0.2rem;
+
+	border: rgb(0, 170, 182) solid 0.2rem;
+	border-radius: 0.75rem;
+
+	background-color: rgb(209, 209, 209);
+
+	p{
+		color: black;
+	}
+
+	&:hover {
+		background-color: rgb(0, 170, 182);
+		border: rgb(209, 209, 209) solid 0.2rem;
+
+		cursor: pointer;
+		
+		p{
+			color: rgb(209, 209, 209) ;
+		}
+	}
+}
+
+.eventText {
+	color: VS.$navbar-main-primary-font-color;
+	margin: 0;
+	padding: 0;
+}
+

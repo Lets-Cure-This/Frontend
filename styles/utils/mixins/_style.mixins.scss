@@ -1,16 +1,18 @@
+// Variables
+@use '@styles/utils/variables/style.variables' as VS;
+
 // Navbar mixins
 @mixin nav-text ($weight, $color) {
 	color: $color;
-	font-family: Raleway, sans-serif;
+	font-family: VS.$main-primary-font-family;
 	font-weight: $weight;
 }
 
-// // Auth Button Mixins
+// // Navbar Auth Button Mixins
 @mixin taiji-button($leftRadius, $rightRadius, $borderSize, $borderColor) {
 	button:first-child {
         border-top-left-radius: $leftRadius;
         border-bottom-left-radius: $leftRadius;
-        border-color: black;
 		border-bottom: $borderSize solid $borderColor;
 		border-top: $borderSize solid $borderColor;
 		border-left: $borderSize solid $borderColor;
@@ -33,13 +35,16 @@
 // // in a row with an even
 // // amount of space between
 // // each item.
-@mixin flex-spaced-center {
+// ^^ row, space-around, center
+@mixin flex-spaced-center($direction, $justifyContent, $alignItems) {
 	display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: $direction; 		// Row
+    justify-content: $justifyContent; 	// space-around
+    align-items: $alignItems;			// Center
+
 }
 
+// // each item.
 // Specialty Mixins
 // // Center Bar
 // // Used for centerbar animation

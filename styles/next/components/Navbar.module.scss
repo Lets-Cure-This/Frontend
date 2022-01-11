@@ -1,17 +1,16 @@
 // Mixins
-@use '../../lib/mixins/style.mixins' as MS;
-@use '../../lib/mixins/animations.mixins' as MA;
-@use '../../lib/variables/style.variables' as VS;
+@use '@styles/utils/mixins/style.mixins' as MS;
+@use '@styles/utils/mixins/animations.mixins' as MA;
+@use '@styles/utils/variables/style.variables' as VS;
 
 .navbarMainContainer {
 	top: 0; 
-    position: fixed;
+    position: sticky;
 	width: 100vw;
-
 }
 
 .navbarMain {
-	@include MS.flex-spaced-center;
+	@include MS.flex-spaced-center(row, space-around, center);
 	width: 100vw;
 	background-color: #fff;
 
@@ -26,11 +25,11 @@
 
 .navbarMainItemList {
 	--border-width: 0.1rem;
-	@include MS.flex-spaced-center;
+	@include MS.flex-spaced-center(row, space-around, center);
 
     li{
-		@include MS.nav-text(300, rgb(131, 131, 131));
-		@include MS.centerBar(rgb(71, 158, 180), var(--border-width), 0rem);	
+		@include MS.nav-text(400, VS.$navbar-main-primary-font-color);
+		@include MS.centerBar(VS.$main-secondary-font-color, var(--border-width), 0rem);	
 		@include MA.transition-seq( all, .2s, ease-in);
 		list-style: none;
 
@@ -39,24 +38,24 @@
 		}
 
 		&:hover {
-            color: #000;
+            color: VS.$navbar-main-secondary-font-color;
 			background-size: 100% var(--border-width);
         }
     }
 }
 
 .logoContainer {
-	@include MS.nav-text(800, rgb(0, 0, 0));
+	@include MS.nav-text(600, VS.$main-primary-font-color);
 }
 
 
 .authContainer {
 	--side-var: 1rem;
-	--button-border-size:  0.1rem;
-	@include MS.taiji-button(var(--side-var), var(--side-var), var(--button-border-size), black);
+	--button-border-size: 0.15rem;
+	@include MS.taiji-button(var(--side-var), var(--side-var), var(--button-border-size), VS.$navbar-main-secondary-font-color);
 
     & > button {
-		@include MS.nav-text(500, rgb(0, 0, 0));
+		@include MS.nav-text(400, VS.$navbar-main-secondary-font-color);
 		@include MA.transition-seq( all, .2s, ease-in);
 
         background-color: white;

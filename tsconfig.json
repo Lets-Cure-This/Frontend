@@ -1,7 +1,25 @@
 {
 	"compilerOptions": {
+		// Custom Paths for quick imports
+		// https://dev.to/whitep4nth3r/how-to-avoid-using-relative-path-imports-in-next-js-eki
+		"baseUrl": "./",
+		"paths": {
+			"@components/*": [
+				"components/*"
+			],
+			"@styles/*": [
+				"styles/*"
+			],
+			"@utils/*": [
+				"utils/*"
+			],
+		},
 		"target": "es2020",
-		"lib": ["dom", "dom.iterable", "esnext"],
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
 		"allowJs": true,
 		"skipLibCheck": true,
 		"strict": true,
@@ -15,6 +33,12 @@
 		"jsx": "preserve",
 		"incremental": true
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-	"exclude": ["node_modules"]
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx"
+	],
+	"exclude": [
+		"node_modules"
+	]
 }

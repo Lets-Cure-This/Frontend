@@ -1,0 +1,26 @@
+// Mixins
+@use '@styles/utils/mixins/style.mixins' as MS;
+
+// <h3 className={styles.diseaseHeader}>
+// <div className={styles.callToActionContainer}>
+// <button className={styles.callToActionButton}>
+
+.indexContainer {
+	@include MS.flex-spaced-center(column, space-around, center);
+
+	height: 40vw;
+	width: 100vw;
+	background-color: rgb(255, 6, 201);
+}
+
+.headerContainer {
+	@include MS.flex-spaced-center(column, space-around, center);
+}
+
+.logoHeader {
+	;
+}
+
+.diseaseHeader {
+
+}
