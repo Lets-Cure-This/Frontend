@@ -25,11 +25,11 @@
 .eventContainerClosed {
 	// For transition settings:
 	//https://stackoverflow.com/questions/13037637/css-animation-and-display-none
-	@include MA.transition-seq(opacity, 0.5s, linear);
+	@include MA.transition-seq(all, 0.5s, linear);
 
 	position: absolute;
 	width: 100vw;
-	height: 2rem;
+	height: 0rem;
 
 	opacity: 0;
 
@@ -41,6 +41,7 @@
 	// This is a hack to get around that.
 	* { 
 		opacity: 0;
+		height: 0rem;
 	}
 }
 
