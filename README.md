@@ -21,15 +21,14 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![AGPL-3.0 License][license-shield]][license-url]
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Lets-Cure-This/repo_name">
+  <a href="https://github.com/Lets-Cure-This/Frontend">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -38,14 +37,14 @@
   <p align="center">
     project_description
     <br />
-    <a href="https://github.com/Lets-Cure-This/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Lets-Cure-This/Frontend"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Lets-Cure-This/repo_name">View Demo</a>
+    <a href="https://github.com/Lets-Cure-This/Frontend">View Demo</a>
     ·
-    <a href="https://github.com/Lets-Cure-This/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/Lets-Cure-This/Frontend/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Lets-Cure-This/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/Lets-Cure-This/Frontend/issues">Request Feature</a>
   </p>
 </div>
 
@@ -84,9 +83,11 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `Lets-Cure-This`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `Lets-Cure-This`, `Frontend`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+	<a href="#top">
+		<p align="right">back to top</p>
+	</a>
 
 
 
@@ -101,7 +102,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+	<a href="#top">
+		<p align="right">back to top</p>
+	</a>
 
 
 
@@ -124,7 +127,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/Lets-Cure-This/repo_name.git
+   git clone https://github.com/Lets-Cure-This/Frontend.git
    ```
 3. Install NPM packages
    ```sh
@@ -135,7 +138,9 @@ This is an example of how to list things you need to use the software and how to
    const API_KEY = 'ENTER YOUR API';
    ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+	<a href="#top">
+		<p align="right">back to top</p>
+	</a>
 
 
 
@@ -146,105 +151,116 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+	<a href="#top">
+		<p align="right">back to top</p>
+	</a>
 
 
 
 <!-- ROADMAP -->
-## Roadmap
-
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-    - [] Nested Feature
-
-See the [open issues](https://github.com/Lets-Cure-This/repo_name/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
+<div>
+	<h1>Roadmap</h1>
+	<ul>
+		<li>Account Authorization/Authentication with MetaMask</li>
+		<li>
+			Setup a redis server in order to cache the known list of diseases
+			<ol>
+				<li>Disease List Rendering via RedisDB</li>
+				<li>Setup RedisJSON in order to store the converted XML files</li>
+				<li>Setup RedisSearch in order to query and fetch in realtime</li>
+			</ol>
+		</li>
+	</ul>
+	<p>
+		See the <a href="https://github.com/Lets-Cure-This/Frontend/issues">open issues</a> for a full list of proposed features (and known issues).
+	</p>
+	<a href="#top">
+		<p align="right">back to top</p>
+	</a>
+</div>
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+<div>
+	<h1>Contributing</h1>
+	<p>
+		Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are <i><b>greatly appreciated</b></i>.
+	</p>
+	<p>
+		If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+		Don't forget to give the project a star! Thanks again!
+	</p>
+	<ol>
+		<li>Fork the Project</li>
+		<li>Create your Feature Branch (<code>git checkout -b feature/AmazingFeature</code>)</li>
+		<li>Commit your Changes (<code>git commit -m 'Add some AmazingFeature</code>)</li>
+		<li>Push to the Branch (<code>git push origin feature/AmazingFeature</code>)</li>
+		<li>Open a Pull Request</li>
+	</ol>
+	<a href="#top">
+		<p align="right">back to top</p>
+	</a>
+</div>
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- LICENSE -->
-## License
+<div href='#License'>
+	<h1>License</h1>
+	<p>
+		Distributed under the MIT License. See `LICENSE.txt` for more information.
+	</p>
+	<a href="#top">
+		<p align="right">back to top</p>
+	</a>
+</div>
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+<!-- Contact Area -->
 <div href='#contact'>
 	<h1>Contact</h1>
-	<div>
-		<h2>Lead Scientist</h2>
-		<ul>
-			<li>Name: Myisha Thasin</li>
-		<ul>
-	</div>
-	<div>
-		<h2>Lead Developer</h2>
-		<ul>
-			<li>Name: Myisha Thasin</li>
-		<ul>
-	</div>
-
+	<table align="center">
+		<tr>
+			<td valign="top">
+				<h2>Lead Developer</h2>
+				<h3>Jonathan Dean</h3>
+			</td>
+			<td valign="top">
+				<h2>Lead Scientist</h2>
+				<h3>Myisha Thasin</h3>
+			</td>
+		</tr>
+	</table>
+	<a href="#top">
+		<p align="right">back to top</p>
+	</a>
 </div>
-<!-- CONTACT -->
-## Contact
 
-### Lead Development -
-
-Name: Jonathan T. Dean
-
-Email: JonathanTomDean@Gmail.com
-
-
-Project Link: [https://github.com/Lets-Cure-This/repo_name](https://github.com/Lets-Cure-This/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+<h3>Information:</h3>
+<a href="https://github.com/Lets-Cure-This/Frontend">
+	Source Code
+</a>
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+<!-- ## Acknowledgments -->
+<!-- * []() -->
+<!-- * []() -->
+<!-- * []() -->
 
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Lets-Cure-This/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/Lets-Cure-This/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Lets-Cure-This/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/Lets-Cure-This/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/Lets-Cure-This/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/Lets-Cure-This/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Lets-Cure-This/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/Lets-Cure-This/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/Lets-Cure-This/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/Lets-Cure-This/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[contributors-shield]: https://img.shields.io/github/contributors/Lets-Cure-This/Frontend.svg?style=for-the-badge
+[contributors-url]: https://github.com/Lets-Cure-This/Frontend/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Lets-Cure-This/Frontend.svg?style=for-the-badge
+[forks-url]: https://github.com/Lets-Cure-This/Frontend/network/members
+[stars-shield]: https://img.shields.io/github/stars/Lets-Cure-This/Frontend.svg?style=for-the-badge
+[stars-url]: https://github.com/Lets-Cure-This/Frontend/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Lets-Cure-This/Frontend.svg?style=for-the-badge
+[issues-url]: https://github.com/Lets-Cure-This/Frontend/issues
+[license-shield]: https://img.shields.io/github/license/Lets-Cure-This/Frontend.svg?style=for-the-badge
+[license-url]: https://github.com/Lets-Cure-This/Frontend/blob/main/LICENSE.txt
+
 [product-screenshot]: images/screenshot.png
