@@ -8,10 +8,20 @@
 // <div className={styles.callToActionContainer}>
 
 .indexContainer {
+	display: flex;
+	flex-direction: column;
+	position: static;
+
+	width: 100vw;
+}
+
+.displayContainer {
 	@include MS.flex-spaced-center(column, space-around, center);
 
-	height: 60vh;
-	width: 100vw;
+	height: 70vh;
+	width: 100%;
+	padding: 4rem;
+
 	background-color: VS.$main-primary-background-color;
 }
 
@@ -26,7 +36,12 @@
 
 .diseaseHeader {
 	@include MS.index-main-p-text(600, VS.$alt-secondary-font-color);
+	// display: static;
+
+	opacity: 0;
 	font-size: 3rem;
+
+	z-index: 1;
 }
 
 // .callToActionContainer {}
@@ -38,7 +53,7 @@
 
 	background-color: white;
 	cursor: pointer;
-
+	
 	& > p {
 		margin: 0.25rem;
 	}
@@ -47,4 +62,38 @@
 		background-color: VS.$taiji-primary-background-color;
 		color: VS.$taiji-primary-color;
 	}
+}
+
+.slideshowContainer {
+	@include MS.flex-spaced-center(column, space-around, center);
+	height: 30vh;
+
+	// margin-top: 2rem;
+}
+
+.wContainer {
+	@include MS.flex-spaced-center(row, space-around, top);
+	height: 40vh;
+
+	background-color: VS.$main-primary-background-color;
+}
+
+.wListItemContainer{
+	@include MS.flex-spaced-center(column, top, center);
+
+	border: VS.$main-primary-font-color 0.15rem solid;
+	border-radius: 1rem;
+	width: 15%;
+	margin: 1rem;
+
+	background-color: #fff;
+}
+
+.descriptionContainer {
+	@include MS.scroll-bar-smooth(VS.$alt-primary-font-color, VS.$main-secondary-font-color, VS.$main-primary-font-color);
+
+	border-top: VS.$main-primary-font-color 0.15rem solid;
+	padding: 1rem;
+	overflow-Y: scroll;
+
 }

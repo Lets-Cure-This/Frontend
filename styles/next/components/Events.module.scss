@@ -57,7 +57,8 @@
 	}
 
 	&:hover {
-		filter: invert(17%) sepia(75%) saturate(1639%) hue-rotate(206deg) brightness(88%) contrast(94%);
+		filter: invert(17%) sepia(75%) saturate(1639%) hue-rotate(206deg) brightness(100%) contrast(54%);
+		cursor: pointer;
 	}
 
 	z-index: 1033;

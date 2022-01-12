@@ -7,6 +7,7 @@ import styles from "@styles/app.module.scss";
 // Components
 import NavbarMain from "../components/generic/Navbar/NavbarMain";
 import EventHeader from "@components/generic/Events/EventHeader/EventHeaderMain";
+import Footer from "@components/generic/Footer/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -21,6 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<main className={styles.pageContainer}>
 				<Component {...pageProps} />
 			</main>
+			<Footer />
 		</>
 	);
 }

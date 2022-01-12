@@ -1,9 +1,18 @@
 .footerContainer {
+
+	position: static;
+	bottom:  0;
+	left: 0;
+
 	background-color: black;
 	
 	height: 20vh;
 	width: 100vw;
+
+	padding: 1rem;
+	padding-top: 2rem;
 }
+
 
 .footerListItem {
 	color: white;

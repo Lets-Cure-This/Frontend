@@ -6,4 +6,37 @@
 	-webkit-transition: $prop $duration $timing;
 }
 
+@mixin fade-in-text {
+	$duration: 1s;
 
+	animation: fadeIn linear var($duration);
+	-webkit-animation: fadeIn linear var($duration);
+	-moz-animation: fadeIn linear var($duration);
+	-o-animation: fadeIn linear var($duration);
+	-ms-animation: fadeIn linear var($duration);
+}
+
+@keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}

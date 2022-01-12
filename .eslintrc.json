@@ -1,4 +1,7 @@
 {
+	// Overview
+	// https://devinshoemaker.com/blog/next-js/configure-eslint
+	// 
 	"env": {
 		"node": true,
 		"es2021": true
@@ -14,17 +17,39 @@
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
-	"plugins": ["@typescript-eslint"],
+	"plugins": [
+		"@typescript-eslint"
+	],
 	"rules": {
 		"no-unused-vars": "off",
 		// "@typescript-eslint/no-unused-vars": "error",
-		"@typescript-eslint/no-unused-vars": ["error"],
+		"@typescript-eslint/no-unused-vars": [
+			"error"
+		],
 		// to enforce using type for object type definitions,
 		// can be type or interface
-		"@typescript-eslint/consistent-type-definitions": ["error", "type"],
-		"indent": ["error", "tab"],
-		"linebreak-style": ["error", "windows"],
-		"quotes": ["error", "double"],
-		"semi": ["error", "always"]
+		"@typescript-eslint/consistent-type-definitions": [
+			"error",
+			"type"
+		],
+		"indent": [
+			"error",
+			"tab"
+		],
+		// Careful with this one: LF to CRLF is annoying af
+		// https://stackoverflow.com/questions/5834014/lf-will-be-replaced-by-crlf-in-git-what-is-that-and-is-it-important
+		// https://stackoverflow.com/questions/1967370/git-replacing-lf-with-crlf
+		"linebreak-style": [
+			"error",
+			"windows"
+		],
+		"quotes": [
+			"error",
+			"double"
+		],
+		"semi": [
+			"error",
+			"always"
+		]
 	}
 }
