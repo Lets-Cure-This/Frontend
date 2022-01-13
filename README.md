@@ -156,22 +156,19 @@
 </pre>
 		<ol>
 			<h2>Development</h2>
-			<li>
-				<p><b>Run development Server on localhost:3000</b></p>
+			<li><p><b>Run development Server on localhost:3000</b></p>
 <pre>
 <code>yarn dev</code>
 <code>npm dev</code>
 </pre>
 			</li>
-			<li>
-				<b><p>Lint entire soure code</b></p>
+			<li><b><p>Lint entire soure code</b></p>
 <pre>
 <code>yarn run-eslint</code>
 <code>npm run-eslint</code>
 </pre>
 			</li>
-			<li>
-				<b><p>Format entire source code</b></p>
+			<li><b><p>Format entire source code</b></p>
 <pre>
 <code>yarn run-prettier</code>
 <code>npm run-prettier</code>
@@ -180,15 +177,13 @@
 		</ol>
 		<ol>
 			<h2>Production</h2>
-			<li>
-				<b><p>Build the application</b></p>
+			<li><b><p>Build the application</b></p>
 <pre>
 <code>yarn build</code>
 <code>npm build</code>
 </pre>
 			</li>
-			<li>
-				<b><p>Run the production application on localhost:3000</b></p>
+			<li><b><p>Run the production application on localhost:3000</b></p>
 <pre>
 <code>yarn run</code>
 <code>npm run</code>
