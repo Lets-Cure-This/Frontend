@@ -148,50 +148,53 @@
 	<br>
 	<p>Run the following commands to install the dependencies:</p>
 	<br />
-	<div>
-		<p><b>Install Dependencies</b></p>
-<pre>
-<code>yarn install</code>
-<code>npm install</code>
-</pre>
-		<ol>
-			<h2>Development</h2>
-			<li><p><b>Run development Server on localhost:3000</b></p>
-<pre>
-<code>yarn dev</code>
-<code>npm dev</code>
-</pre>
-			</li>
-			<li><b><p>Lint entire soure code</b></p>
-<pre>
-<code>yarn run-eslint</code>
-<code>npm run-eslint</code>
-</pre>
-			</li>
-			<li><b><p>Format entire source code</b></p>
-<pre>
-<code>yarn run-prettier</code>
-<code>npm run-prettier</code>
-</pre>
-			</li>
-		</ol>
-		<ol>
-			<h2>Production</h2>
-			<li><b><p>Build the application</b></p>
-<pre>
-<code>yarn build</code>
-<code>npm build</code>
-</pre>
-			</li>
-			<li><b><p>Run the production application on localhost:3000</b></p>
-<pre>
-<code>yarn run</code>
-<code>npm run</code>
-</pre>
-			</li>
-		</ol>
-	</div>
 </div>
+
+
+Install Dependencies
+
+```zsh
+yarn install
+npm install
+```
+If you are going to contribute to the project, please make sure to follow the instructions for the development environment. If you are simply trying to host your own LCT site, you can follow the production environment instructions.
+## Development
+1. Run development server on **localhost:3000**
+
+```zsh
+yarn dev
+npm dev
+```
+	
+2. Lint _entire_ soure code
+
+```zsh
+yarn run-eslint
+npm run-eslint
+```
+
+3. Format **text** of _entire_ source code
+
+```zsh
+yarn run-prettier
+npm run-prettier
+```
+
+## Production
+
+1. Build the application
+
+```zsh
+yarn build
+npm build
+```
+
+2. Run the production application on **localhost:3000**
+
+```zsh
+yarn run
+npm run
+```
 
 <!-- ### Installation
 
