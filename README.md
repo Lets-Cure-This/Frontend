@@ -147,78 +147,55 @@
 	<p>Following the steps below will ensure that you have the correct prerequisites installed, allowing you to interact with the source code with minimal interruptions.</p>
 	<br>
 	<p>Run the following commands to install the dependencies:</p>
-	<ol>
-		<li>
-			<p><b>Install Dependencies</b></p>
-			<pre>
-				<code>
-					yarn install
-				</code>
-			</pre>
-			<br />
-			<pre>
-				<code>
-					npm install
-				</code>
-			</pre>
-		</li>
-		<li>
-			<b><p>Build the application</b></p>
-			<pre>
-				<code>
-					yarn build
-				</code>
-			</pre>
-			<br />
-			<pre>
-				<code>
-					npm build
-				</code>
-			</pre>
-		</li>
-		<li>
-			<b><p>Run the built application on localhost:3000</b></p>
-			<pre>
-				<code>
-					yarn run
-				</code>
-			</pre>
-			<br />
-			<pre>
-				<code>
-					npm run
-				</code>
-			</pre>
-		</li>
-		<li>
-			<b><p>Lint entire soure code</b></p>
-			<pre>
-				<code>
-					yarn run-eslint
-				</code>
-			</pre>
-			<br />
-			<pre>
-				<code>
-					npm run-eslint
-				</code>
-			</pre>
-		</li>
-		<li>
-			<b><p>Format entire source code</b></p>
-			<pre>
-				<code>
-					yarn run-prettier
-				</code>
-			</pre>
-			<br />
-			<pre>
-				<code>
-					npm run-prettier
-				</code>
-			</pre>
-		</li>
-	</ol>
+	<br />
+	<div>
+		<p><b>Install Dependencies</b></p>
+<pre>
+<code>yarn install</code>
+<code>npm install</code>
+</pre>
+		<ol>
+			<h2>Development</h2>
+			<li>
+				<p><b>Run development Server on localhost:3000</b></p>
+<pre>
+<code>yarn dev</code>
+<code>npm dev</code>
+</pre>
+			</li>
+			<li>
+				<b><p>Lint entire soure code</b></p>
+<pre>
+<code>yarn run-eslint</code>
+<code>npm run-eslint</code>
+</pre>
+			</li>
+			<li>
+				<b><p>Format entire source code</b></p>
+<pre>
+<code>yarn run-prettier</code>
+<code>npm run-prettier</code>
+</pre>
+			</li>
+		</ol>
+		<ol>
+			<h2>Production</h2>
+			<li>
+				<b><p>Build the application</b></p>
+<pre>
+<code>yarn build</code>
+<code>npm build</code>
+</pre>
+			</li>
+			<li>
+				<b><p>Run the production application on localhost:3000</b></p>
+<pre>
+<code>yarn run</code>
+<code>npm run</code>
+</pre>
+			</li>
+		</ol>
+	</div>
 </div>
 
 <!-- ### Installation
